@@ -1,0 +1,112 @@
+<!-- Shift exclamation to create basic HTML structure -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- This is the main HTML -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to our website</h1>
+            <p>Discover our amazing products and services</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+    <!-- Create to blocks one for script -->
+    <script>
+    
+
+    </script>
+    <!-- Create one for styles -->
+    <!-- Shift-alt-F formatting -->
+    <style>
+        /* Make the backgroun linear gradient light grey don't repeat it*/
+        body {
+            background: linear-gradient(to bottom, #eee, #9d9d9d);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            /* Set the font to the same as the default OS */
+            font-family: system-ui;
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .hero {
+            background-image: url('path/to/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-content button {
+            background-color: white;
+            color: black;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position:relative;
+        }
+
+        /* On hover make the button animate and scale up */
+        .hero-content button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Add the fireworks animation */
+        @keyframes fireworks {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(2);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</body>
+
+</html>
