@@ -14,7 +14,7 @@
         <div class="hero-content">
             <h1>AI Decision Tree</h1>
             <p>Discover your journey to AI</p>
-            <button>Learn More</button>
+            <button class="learnmore" onclick="showConfetti()">Learn More</button>
         </div>
 
     </section>
@@ -39,6 +39,7 @@
             <button class="box">Users</button>
         </div>
         <div id="questions-container" style="display: none;"></div>
+        <canvas id="confetti-canvas"></canvas>
     </div>
 
     <script>
@@ -52,29 +53,35 @@
             document.getElementById("boxes").style.display = "flex";
         }
         function showSecurity() {
-        const questions = [
-            "Does MS use my data for training? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--</a>",
-            "What's the relationship between OpenAI and Azure OpenAI? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-</a>",
-            "What does Azure OpenAI do with our data? <a href='https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy' target='_blank'>https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy</a>",
-            "Does OpenAI support vNet and Private endpoints? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-</a>"
-        ];
+            const questions = [
+                "Does MS use my data for training? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--</a>",
+                "What's the relationship between OpenAI and Azure OpenAI? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-</a>",
+                "What does Azure OpenAI do with our data? <a href='https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy' target='_blank'>https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy</a>",
+                "Does OpenAI support vNet and Private endpoints? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-</a>"
+            ];
 
-        let questionsList = "<ol>";
-        for (let i = 0; i < questions.length; i++) {
-            questionsList += "<li>" + questions[i] + "</li>";
+            let questionsList = "<ol>";
+            for (let i = 0; i < questions.length; i++) {
+                questionsList += "<li>" + questions[i] + "</li>";
+            }
+            questionsList += "</ol>";
+
+            document.getElementById("questions-container").innerHTML = questionsList;
+            document.getElementById("questions-container").style.display = "block";
+            document.getElementById("video").style.display = "none";
+            document.getElementById("buttons-container").style.display = "none";
         }
-        questionsList += "</ol>";
-
-        document.getElementById("questions-container").innerHTML = questionsList;
-        document.getElementById("questions-container").style.display = "block";
-        document.getElementById("video").style.display = "none";
-        document.getElementById("buttons-container").style.display = "none";
-    }
     </script>
     <!-- Create to blocks one for script -->
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
     <script>
 
-
+        function showConfetti() {
+            const confettiSettings = { target: 'confetti-canvas' };
+            const confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+            setTimeout(() => confetti.clear(), 3000);
+        }
     </script>
     <!-- Create one for styles -->
     <!-- Shift-alt-F formatting -->
@@ -176,7 +183,7 @@
         }
 
         .button:hover {
-            background-color: #005fa3;
+            background-color: #90d1ff;
         }
 
         .box {
@@ -192,23 +199,30 @@
         }
 
         .box:nth-child(1) {
-            background-color: #007cce;
+            background-color: #2992d9;
             color: white;
         }
 
         .box:nth-child(2) {
-            background-color: #378c74;
+            background-color: #34c39a;
             color: white;
         }
 
         .box:nth-child(3) {
-            background-color: #bb3a65;
+            background-color: #d24474;
             color: white;
         }
 
         .box:nth-child(4) {
-            background-color: #c6522c;
+            background-color: #e56e46;
             color: white;
+        }
+
+        #confetti-canvas {
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: -1;
         }
     </style>
 </body>
