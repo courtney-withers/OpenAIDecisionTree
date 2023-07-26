@@ -12,14 +12,68 @@
     <!-- This is the main HTML -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to our website</h1>
-            <p>Discover our amazing products and services</p>
+            <h1>AI Decision Tree</h1>
+            <p>Discover your journey to AI</p>
             <button>Learn More</button>
         </div>
+
     </section>
+    <div class="container">
+        <div class="question">On a scale of 1-5 where are you in your journey with AI?</div>
+        <div class="buttons">
+            <button class="button" onclick="showVideo()">1</button>
+            <button class="button" onclick="showBoxes()">2</button>
+            <button class="button" onclick="showBoxes()">3</button>
+            <button class="button" onclick="showBoxes()">4</button>
+            <button class="button" onclick="showBoxes()">5</button>
+        </div>
+        <div id="video" style="display: none;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ad79nYk2keg" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div id="boxes" style="display: none;">
+            <button class="box" onclick="showSecurity()">Security</button>
+            <button class="box">Compliance</button>
+            <button class="box">Skills</button>
+            <button class="box">Users</button>
+        </div>
+        <div id="questions-container" style="display: none;"></div>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById("video").style.display = "block";
+            document.getElementById("boxes").style.display = "none";
+        }
+
+        function showBoxes() {
+            document.getElementById("video").style.display = "none";
+            document.getElementById("boxes").style.display = "flex";
+        }
+        function showSecurity() {
+        const questions = [
+            "Does MS use my data for training? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--</a>",
+            "What's the relationship between OpenAI and Azure OpenAI? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-</a>",
+            "What does Azure OpenAI do with our data? <a href='https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy' target='_blank'>https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy</a>",
+            "Does OpenAI support vNet and Private endpoints? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-</a>"
+        ];
+
+        let questionsList = "<ol>";
+        for (let i = 0; i < questions.length; i++) {
+            questionsList += "<li>" + questions[i] + "</li>";
+        }
+        questionsList += "</ol>";
+
+        document.getElementById("questions-container").innerHTML = questionsList;
+        document.getElementById("questions-container").style.display = "block";
+        document.getElementById("video").style.display = "none";
+        document.getElementById("buttons-container").style.display = "none";
+    }
+    </script>
     <!-- Create to blocks one for script -->
     <script>
-    
+
 
     </script>
     <!-- Create one for styles -->
@@ -80,7 +134,7 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            position:relative;
+            position: relative;
         }
 
         /* On hover make the button animate and scale up */
@@ -88,24 +142,74 @@
             transform: scale(1.1);
         }
 
-        /* Add the fireworks animation */
-        @keyframes fireworks {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(2);
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: scale(3);
-                opacity: 0;
-            }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
         }
 
+        .question {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .button {
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            background-color: #005fa3;
+        }
+
+        .box {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .box:nth-child(1) {
+            background-color: #007cce;
+            color: white;
+        }
+
+        .box:nth-child(2) {
+            background-color: #378c74;
+            color: white;
+        }
+
+        .box:nth-child(3) {
+            background-color: #bb3a65;
+            color: white;
+        }
+
+        .box:nth-child(4) {
+            background-color: #c6522c;
+            color: white;
+        }
     </style>
 </body>
 
