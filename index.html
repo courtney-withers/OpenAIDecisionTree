@@ -1,230 +1,429 @@
-<!-- Shift exclamation to create basic HTML structure -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Hostit</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <!-- This is the main HTML -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>AI Decision Tree</h1>
-            <p>Discover your journey to AI</p>
-            <button class="learnmore" onclick="showConfetti()">Learn More</button>
-        </div>
 
-    </section>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>welcome.</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="price.html">Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="quote_btn-container">
+              <form class="form-inline">
+                <button class="btn   nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <!-- <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner"> -->
+      <!-- <div class="carousel-item active"> -->
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="detail-box">
+                <h1>
+                  AI Decision Tree <br>
+                </h1>
+                <p>
+                  Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in
+                  the middle of text. All the Lorem Ipsumm </p>
+                <div class="btn-box">
+                  <a href="" class="btn-1">
+                    Take Quiz
+                  </a>
+                  <a href="" class="btn-2">
+                    Explore Services
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class=" col-lg-10 mx-auto">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Journey to the Cloud <br>
+                    </h1>
+                    <p>
+                      Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in the middle of text. All the Lorem Ipsumm </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        Read More
+                      </a>
+                      <a href="" class="btn-2">
+                        Contact Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class=" col-lg-10 mx-auto">
+                      <div class="img-box">
+                        <img src="images/slider-img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      <!-- <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Skilling with AI <br>
+                      Web Hosting
+                    </h1>
+                    <p>
+                      Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden in the middle of text. All the Lorem Ipsumm </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        Read More
+                      </a>
+                      <a href="" class="btn-2">
+                        Contact Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class=" col-lg-10 mx-auto">
+                      <div class="img-box">
+                        <img src="images/slider-img.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <!-- <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div> -->
+  </div>
+  </section>
+  <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
     <div class="container">
-        <div class="question">On a scale of 1-5 where are you in your journey with AI?</div>
-        <div class="buttons">
-            <button class="button" onclick="showVideo()">1</button>
-            <button class="button" onclick="showBoxes()">2</button>
-            <button class="button" onclick="showBoxes()">3</button>
-            <button class="button" onclick="showBoxes()">4</button>
-            <button class="button" onclick="showBoxes()">5</button>
-        </div>
-        <div id="video" style="display: none;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ad79nYk2keg" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-        <div id="boxes" style="display: none;">
-            <button class="box" onclick="showSecurity()">Security</button>
-            <button class="box">Compliance</button>
-            <button class="box">Skills</button>
-            <button class="box">Users</button>
-        </div>
-        <div id="questions-container" style="display: none;"></div>
-        <canvas id="confetti-canvas"></canvas>
+      <div class="heading_container heading_center">
+        <h2>
+          Our Services
+        </h2>
+      </div>
     </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Shared Hosting
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-    <script>
-        function showVideo() {
-            document.getElementById("video").style.display = "block";
-            document.getElementById("boxes").style.display = "none";
-        }
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Dedicated Hosting
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-        function showBoxes() {
-            document.getElementById("video").style.display = "none";
-            document.getElementById("boxes").style.display = "flex";
-        }
-        function showSecurity() {
-            const questions = [
-                "Does MS use my data for training? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#do-you-use-my-company-data-to-train-any-of-the-models--</a>",
-                "What's the relationship between OpenAI and Azure OpenAI? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-do-the-capabilities-of-azure-openai-compare-to-openai-</a>",
-                "What does Azure OpenAI do with our data? <a href='https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy' target='_blank'>https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy</a>",
-                "Does OpenAI support vNet and Private endpoints? <a href='https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-' target='_blank'>https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#does-azure-openai-support-vnets-and-private-endpoints-</a>"
-            ];
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 ">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Cloud Hosting
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-            let questionsList = "<ol>";
-            for (let i = 0; i < questions.length; i++) {
-                questionsList += "<li>" + questions[i] + "</li>";
-            }
-            questionsList += "</ol>";
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s4.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                VPS Hosting
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-            document.getElementById("questions-container").innerHTML = questionsList;
-            document.getElementById("questions-container").style.display = "block";
-            document.getElementById("video").style.display = "none";
-            document.getElementById("buttons-container").style.display = "none";
-        }
-    </script>
-    <!-- Create to blocks one for script -->
-    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
-    <script>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s5.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Wordpress Hosting
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-        function showConfetti() {
-            const confettiSettings = { target: 'confetti-canvas' };
-            const confetti = new ConfettiGenerator(confettiSettings);
-            confetti.render();
-            setTimeout(() => confetti.clear(), 3000);
-        }
-    </script>
-    <!-- Create one for styles -->
-    <!-- Shift-alt-F formatting -->
-    <style>
-        /* Make the backgroun linear gradient light grey don't repeat it*/
-        body {
-            background: linear-gradient(to bottom, #eee, #9d9d9d);
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            /* Set the font to the same as the default OS */
-            font-family: system-ui;
-        }
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/s6.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Domain Name
+              </h4>
+              <p>
+                Generators on the Internet tend to repeat predefined chunks as necessary
+              </p>
+              <a href="">
+                Read More
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 
-        html {
-            height: 100%;
-            width: 100%;
-        }
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
+              need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+              generators on the Internet tend to repeat predefined chunks </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
 
 
-        .hero {
-            background-image: url('path/to/hero-image.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  <!-- server section -->
 
-        .hero-content {
-            text-align: center;
-            color: rgb(0, 0, 0);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+  <section class="server_section">
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/server-img.jpg" alt="">
+            <div class="play_btn">
+              <button>
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Let us manage your server
+              </h2>
+              <p>
+                Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore
+              </p>
+            </div>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
+  <!-- end server section -->
 
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            letter-spacing: 0.05em;
-        }
 
-        .hero-content button {
-            background-color: white;
-            color: black;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 2rem;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            position: relative;
-        }
 
-        /* On hover make the button animate and scale up */
-        .hero-content button:hover {
-            transform: scale(1.1);
-        }
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+        <p style="font-size: 12px;">The information provided is intended as guidance only and does not constitute advice. 
+        Consult further with your MS Specialists or digital teams before making any changes to your IT systems.</p>
+    </div>
+  </footer>
+  <!-- footer section -->
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
 
-        .question {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
 
-        .buttons {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .button {
-            background-color: #007acc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin: 0 10px;
-            cursor: pointer;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .button:hover {
-            background-color: #90d1ff;
-        }
-
-        .box {
-            background-color: #f2f2f2;
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .box:nth-child(1) {
-            background-color: #2992d9;
-            color: white;
-        }
-
-        .box:nth-child(2) {
-            background-color: #34c39a;
-            color: white;
-        }
-
-        .box:nth-child(3) {
-            background-color: #d24474;
-            color: white;
-        }
-
-        .box:nth-child(4) {
-            background-color: #e56e46;
-            color: white;
-        }
-
-        #confetti-canvas {
-            position: absolute;
-            left:0;
-            top:0;
-            z-index: -1;
-        }
-    </style>
 </body>
 
 </html>
